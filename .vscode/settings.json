@@ -1,0 +1,11 @@
+{
+    "al.codeAnalyzers": ["${CodeCop}","${PerTenantExtensionCop}","${UICop}"],
+    "al.enableCodeAnalysis": true,
+    "CRS.AlSubFolderName": "None",
+    "CRS.RemovePrefixFromFilename": false,
+    "CRS.ObjectNamePrefix": "TSE",
+    "CRS.ExtensionObjectNamePattern": "",
+    "CRS.FileNamePattern": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
+    "CRS.FileNamePatternExtensions": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
+    "CRS.FileNamePatternPageCustomizations": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al"
+}

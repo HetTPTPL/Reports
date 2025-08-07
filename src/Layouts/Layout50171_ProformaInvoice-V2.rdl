@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="Report_Lbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Report_Lbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Report_Lbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Billto_Lbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Billto_Lbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Billto_Lbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Sellto_Lbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Sellto_Lbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Sellto_Lbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CompanyInfo_Lbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CompanyInfo_Lbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CompanyInfo_Lbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PaymentTern_Lbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>PaymentTern_Lbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>PaymentTern_Lbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ShipmentMethod_Lbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ShipmentMethod_Lbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ShipmentMethod_Lbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PaymentMethod_Lbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>PaymentMethod_Lbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>PaymentMethod_Lbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="LineNo_Lbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>LineNo_Lbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>LineNo_Lbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Description_Lbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Description_Lbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Description_Lbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Quantity_Lbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Quantity_Lbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Quantity_Lbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="LineDiscount_Lbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>LineDiscount_Lbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>LineDiscount_Lbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="LineAmt_Lbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>LineAmt_Lbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>LineAmt_Lbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AmtWords_Lbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>AmtWords_Lbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>AmtWords_Lbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="TotalLineAmt_Lbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>TotalLineAmt_Lbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>TotalLineAmt_Lbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="TotalLineDiscount_Lbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>TotalLineDiscount_Lbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>TotalLineDiscount_Lbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AmtPayable_Lbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>AmtPayable_Lbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>AmtPayable_Lbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AmtinWords_Lbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>AmtinWords_Lbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>AmtinWords_Lbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Comments_Lbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Comments_Lbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Comments_Lbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="AutorizedSign_Lbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>AutorizedSign_Lbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>AutorizedSign_Lbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Paisa_Lbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Paisa_Lbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Paisa_Lbl</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_SalesHeader">
+          <DataField>No_SalesHeader</DataField>
+        </Field>
+        <Field Name="BilltoName_SalesHeader">
+          <DataField>BilltoName_SalesHeader</DataField>
+        </Field>
+        <Field Name="BilltoContact_SalesHeader">
+          <DataField>BilltoContact_SalesHeader</DataField>
+        </Field>
+        <Field Name="BilltoAddress_SalesHeader">
+          <DataField>BilltoAddress_SalesHeader</DataField>
+        </Field>
+        <Field Name="BilltoCity_SalesHeader">
+          <DataField>BilltoCity_SalesHeader</DataField>
+        </Field>
+        <Field Name="BilltoAddress2_SalesHeader">
+          <DataField>BilltoAddress2_SalesHeader</DataField>
+        </Field>
+        <Field Name="BilltoPostCode_SalesHeader">
+          <DataField>BilltoPostCode_SalesHeader</DataField>
+        </Field>
+        <Field Name="SelltoCustomerName_SalesHeader">
+          <DataField>SelltoCustomerName_SalesHeader</DataField>
+        </Field>
+        <Field Name="SelltoContact_SalesHeader">
+          <DataField>SelltoContact_SalesHeader</DataField>
+        </Field>
+        <Field Name="SelltoAddress_SalesHeader">
+          <DataField>SelltoAddress_SalesHeader</DataField>
+        </Field>
+        <Field Name="SelltoAddress2_SalesHeader">
+          <DataField>SelltoAddress2_SalesHeader</DataField>
+        </Field>
+        <Field Name="SelltoCity_SalesHeader">
+          <DataField>SelltoCity_SalesHeader</DataField>
+        </Field>
+        <Field Name="SelltoPostCode_SalesHeader">
+          <DataField>SelltoPostCode_SalesHeader</DataField>
+        </Field>
+        <Field Name="CompanyName_Company">
+          <DataField>CompanyName_Company</DataField>
+        </Field>
+        <Field Name="CompanyLogo_Company">
+          <DataField>CompanyLogo_Company</DataField>
+        </Field>
+        <Field Name="CompanyAddress_Company">
+          <DataField>CompanyAddress_Company</DataField>
+        </Field>
+        <Field Name="CompanyAddress2_Company">
+          <DataField>CompanyAddress2_Company</DataField>
+        </Field>
+        <Field Name="CompanyCity_Company">
+          <DataField>CompanyCity_Company</DataField>
+        </Field>
+        <Field Name="CompanyPostCode_Company">
+          <DataField>CompanyPostCode_Company</DataField>
+        </Field>
+        <Field Name="BilltoCountry_SalesHeader">
+          <DataField>BilltoCountry_SalesHeader</DataField>
+        </Field>
+        <Field Name="SelltoCountry_SalesHeader">
+          <DataField>SelltoCountry_SalesHeader</DataField>
+        </Field>
+        <Field Name="CompanyCountry_SalesHeader">
+          <DataField>CompanyCountry_SalesHeader</DataField>
+        </Field>
+        <Field Name="ShipmentMethodDesc_SalesHeader">
+          <DataField>ShipmentMethodDesc_SalesHeader</DataField>
+        </Field>
+        <Field Name="PaymentMethodDesc_SalesHeader">
+          <DataField>PaymentMethodDesc_SalesHeader</DataField>
+        </Field>
+        <Field Name="PaymenttermDesc_SalesHeader">
+          <DataField>PaymenttermDesc_SalesHeader</DataField>
+        </Field>
+        <Field Name="No_SalesLine">
+          <DataField>No_SalesLine</DataField>
+        </Field>
+        <Field Name="Description_SalesLine">
+          <DataField>Description_SalesLine</DataField>
+        </Field>
+        <Field Name="Quantity_SalesLine">
+          <DataField>Quantity_SalesLine</DataField>
+        </Field>
+        <Field Name="Quantity_SalesLineFormat">
+          <DataField>Quantity_SalesLineFormat</DataField>
+        </Field>
+        <Field Name="LineDiscountAmount_SalesLine">
+          <DataField>LineDiscountAmount_SalesLine</DataField>
+        </Field>
+        <Field Name="LineDiscountAmount_SalesLineFormat">
+          <DataField>LineDiscountAmount_SalesLineFormat</DataField>
+        </Field>
+        <Field Name="LineAmount_SalesLine">
+          <DataField>LineAmount_SalesLine</DataField>
+        </Field>
+        <Field Name="LineAmount_SalesLineFormat">
+          <DataField>LineAmount_SalesLineFormat</DataField>
+        </Field>
+        <Field Name="Comment_SalesCommentLine">
+          <DataField>Comment_SalesCommentLine</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

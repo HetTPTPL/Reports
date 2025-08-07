@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="Report_Lbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Report_Lbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Report_Lbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CustNo_Lbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CustNo_Lbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CustNo_Lbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CustName_Lbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CustName_Lbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CustName_Lbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PostingGrp_Lbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>PostingGrp_Lbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>PostingGrp_Lbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Balance_Lbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Balance_Lbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Balance_Lbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="PostingDate_Lbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>PostingDate_Lbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>PostingDate_Lbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DocType_Lbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>DocType_Lbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>DocType_Lbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DocumentNo_Lbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>DocumentNo_Lbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>DocumentNo_Lbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="Amt_Lbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>Amt_Lbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Amt_Lbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="RemainingAmt_Lbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>RemainingAmt_Lbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>RemainingAmt_Lbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="CompanyBalance_Lbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>CompanyBalance_Lbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>CompanyBalance_Lbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="ReportFilter_Lbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>ReportFilter_Lbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>ReportFilter_Lbl</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="DateFilter_Lbl">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>DateFilter_Lbl</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>DateFilter_Lbl</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Entry_No_">
+          <DataField>Entry_No_</DataField>
+        </Field>
+        <Field Name="CompanyName">
+          <DataField>CompanyName</DataField>
+        </Field>
+        <Field Name="CustomerNo">
+          <DataField>CustomerNo</DataField>
+        </Field>
+        <Field Name="CustomerName">
+          <DataField>CustomerName</DataField>
+        </Field>
+        <Field Name="PostingDate">
+          <DataField>PostingDate</DataField>
+        </Field>
+        <Field Name="DocumentType">
+          <DataField>DocumentType</DataField>
+        </Field>
+        <Field Name="DocumentNo">
+          <DataField>DocumentNo</DataField>
+        </Field>
+        <Field Name="CustomerBalance">
+          <DataField>CustomerBalance</DataField>
+        </Field>
+        <Field Name="CustomerBalanceFormat">
+          <DataField>CustomerBalanceFormat</DataField>
+        </Field>
+        <Field Name="Amount">
+          <DataField>Amount</DataField>
+        </Field>
+        <Field Name="AmountFormat">
+          <DataField>AmountFormat</DataField>
+        </Field>
+        <Field Name="RemainingAmount">
+          <DataField>RemainingAmount</DataField>
+        </Field>
+        <Field Name="RemainingAmountFormat">
+          <DataField>RemainingAmountFormat</DataField>
+        </Field>
+        <Field Name="PostingGroup_TSEConsolidatedCustBalance">
+          <DataField>PostingGroup_TSEConsolidatedCustBalance</DataField>
+        </Field>
+        <Field Name="StartDate">
+          <DataField>StartDate</DataField>
+        </Field>
+        <Field Name="EndDate">
+          <DataField>EndDate</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
